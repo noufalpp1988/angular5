@@ -1,0 +1,10 @@
+$color_gray:#888;
+.nav-ul{
+width:100%;
+li{
+    display: inline-block;
+    a{
+        color: $color_gray;
+    }
+}
+}

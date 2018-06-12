@@ -1,3 +1,32 @@
-<div class="container">
-  sdfs
+<br/>
+<div class="row">
+  <div class="container bg-light" [@goals]="goals.length">
+    <div class="row">
+      <div class="col-md-12">
+        <p>Add a bucker list item</p>
+      </div>
+      <hr/>
+      <div class="col-md-12">
+        <p>Your bucker list {{itemCount}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p>Use below form to add a new bucket</p>
+        <form>
+          <input type="text" class="input-controls" name="item" [(ngModel)]="goalText" placeholder="Enter life goal" />
+          <input type="submit" class="btn btn-default" (click)="addItem()" [value]="btnText" />
+        </form>
+      </div>
+      <hr/>
+      <div class="col-md-12">
+        <ul>
+          <li class="container text-center life-container" *ngFor="let goal of goals;let i=index" (click)="removeItem(i)">
+            {{goal}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
